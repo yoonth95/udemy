@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+}
+
+header .img-div {
+    width: 10%;
+}
+
+header .img-div img {
+    width: 80px;
+    height: 25px;
+}
+
+
+header .nav-div {
+    width: 45%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+}
+
+header .nav-div a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+header .login-div {
+    width: 35%;
+    text-align: end;
+}
+
+header .login-div a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
