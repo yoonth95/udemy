@@ -139,8 +139,16 @@ main {
     margin: 5px 0;
 }
 
+#section_skill hr {
+    width: 600px;
+    margin: 20px 0;
+    background: #ddd;
+    height: 1px;
+    border: 0;
+}
+
 .info2 {
-    width: 50%;
+    width: 100%;
     display: flex;
     gap: 65px;
     margin: 30px 0;
@@ -189,8 +197,9 @@ main {
 .award-info {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 45%;
     margin: 10px 0 70px;
+    flex-wrap: wrap;
 }
 
 .award-info hr {
@@ -248,9 +257,40 @@ body {
 }
 
 
-/* @media screen and (max-width: 768px) {
-    p {
-        font-size: 24px;
-        color: blue;
+@media screen and (max-width: 768px) {
+    .award-info {
+        width: 80%;
     }
-} */
+}
+
+
+@media screen and (max-width: 616px) {
+    .info1 {
+        flex-direction: column;
+    }
+
+    .info2 {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .info2 img {
+        width: 200px;
+    }
+
+    #section_skill hr {
+        width: 80%;
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+    .info1 {
+        flex-direction: column;
+    }
+
+    .award-info {
+        width: 100%;
+    }
+}
