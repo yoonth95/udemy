@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자기소개서</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header><h1>자기소개서</h1></header>
+    <nav>
+        <ul class="pagination">
+            <li id="profile"><a href="#" onclick="pagination('profile')"><i class="fa-solid fa-user"></i>&nbsp; 프로필</a></li>
+            <li id="skill"><a href="#" onclick="pagination('skill')"><i class="fa-solid fa-list"></i>&nbsp; 스킬</a></li>
+            <li id="award"><a href="#" onclick="pagination('award')"><i class="fa-solid fa-award"></i>&nbsp; 수상 및 자격증</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="section1" id="section_profile">
+            <h2>프로필</h2>
+            <div class="info1">
+                <img class="profile" src="image/1.png">
+                <div>
+                    <div class="user-info">
+                        <p class="user-name">윤태현</p>
+                        <div style="display: flex; flex-direction: column;">
+                            <a href="https://github.com/yoonth95">https://github.com/yoonth95</a>
+                            <a href="https://velog.io/@yoonth95">https://velog.io/@yoonth95</a>
+                        </div>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><strong>MBTI</strong> : ENFP</li>
+                            <li><strong>취미</strong> : 운동 (축구 좋아합니다.)</li>
+                            <li><strong>성격</strong> : 밝고 긍정적입니다.</li>
+                            <li><strong>좌우명</strong> : 한 번 시작했으면 만족하고자 하는 성과를 내자!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section1" id="section_skill">
+            <h2 style="margin: 30px 0 15px;">스킬 및 프로젝트</h2>
+            <p class="additional">사용했던 기술들을 나열했습니다.</p>
+            <div class="info2">
+                <div class="skill-list">
+                    <h4>Front-End</h4>
+                    <div>
+                        <ul>
+                            <li>HTML/CSS</li>
+                            <li>Pug</li>
+                            <li>JavaScript</li>
+                            <li>jQuery</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="skill-list">
+                    <h4>Back-End</h4>
+                    <div>
+                        <ul>
+                            <li>Flask</li>
+                            <li>Node.js</li>
+                            <li>AWS (EC2, S3, SES 등)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="skill-list">
+                    <h4>Database</h4>
+                    <div>
+                        <ul>
+                            <li>MySQL</li>
+                            <li>MariaDB</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <p class="additional" style="margin: 10px;">개인 프로젝트입니다.</p>
+            <div class="info2">
+                <img src="image/2.png" alt="">
+                <div class="project-info">
+                    <h3 style="margin-top: 0">계란 요리 성격 유형 검사</h3>
+                    <div class="use-skill">
+                        <span>HTML/CSS</span>
+                        <span>Vaniila JS</span>
+                        <span>Firebase</span>
+                    </div>
+                    <div style="margin: 10px 0;">
+                        <p>성격 유형 검사를 통해 계란 요리와 매칭 시켜서 알려준다.</p>
+                        <p>기획부터 시작해서 개발 및 배포까지 1인 개발</p>
+                    </div>
+                    <ul>
+                        <li>팀 구성 - 개인</li>
+                        <li><a href="https://egg-type.web.app/">https://egg-type.web.app/</a></li>
+                        <li><a href="https://github.com/yoonth95/EBTI">https://github.com/yoonth95/EBTI</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section1" id="section_award">
+            <h2 style="margin: 30px 0;">수상 및 자격증</h2>
+            <div class="award-info">
+                <div class="award-list">
+                    <div class="award-date">2023-04</div>
+                    <div class="award-text">
+                        <h3>SQLD 자격증 취득</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="award-list">
+                    <div class="award-date">2021-08</div>
+                    <div class="award-text">
+                        <h3>UiPath RPA League 2021 Boot Camp 해커톤</h3>
+                        <p>OCR를 활용한 명함 데이터 추출 및 상품 기획서 워드 자동화 제작 및 이메일 발송 개발로 1등 상 수상</p>
+                    </div>
+                </div>
+                <div class="award-list">
+                    <div class="award-date">2021-07</div>
+                    <div class="award-text">
+                        <h3>한경닷컴IT교육센터 주관 공모전</h3>
+                        <p>어린이집 아동 학대 데이터 분석과 CCTV 영상 분류 및 챗봇으로 1등 상 수상</p>
+                    </div>
+                </div>
+                <div class="award-list">
+                    <div class="award-date">2023-04</div>
+                    <div class="award-text">
+                        <h3>정보처리기사 자격증 취득</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="award-list">
+                    <div class="award-date">2023-04</div>
+                    <div class="award-text">
+                        <h3>대학 교내 캡스톤 경진대회</h3>
+                        <p>아두이노 기반 센서를 활용한 자동 분리수거 쓰레기통 제작으로 장려상 수상</p>
+                    </div>
+                </div>
+                <div class="award-list">
+                    <div class="award-date">2023-04</div>
+                    <div class="award-text">
+                        <h3>학과 학술대회</h3>
+                        <p>아두이노 기반 무인 비행 장치 및 조종 웨어러블 장갑 제작으로 1등 상 수상</p>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+    <footer>저작권 2023 웹 사이트 All rights reserved.</footer>
+
+    <script type="text/JavaScript" src="js/index.js"></script>
+</body>
+</html>
