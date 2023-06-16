@@ -236,6 +236,10 @@ main {
     margin-top: 0;
 }
 
+.div-block {
+    display: flex;
+}
+
 footer {
     background-color: #333;
     color: #fff;
