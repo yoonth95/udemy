@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    width: 88%;
+    list-style:none;
+    padding-left:0px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.weather {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 20px 20px;
+    padding: 15px;
+    color: #fff;
+    font-size: 1.2rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 15%;
+    float: right;
+}
+
+.weather .tempInfo {
+    display: flex;
+    gap: 30px;
+}
+
+.weather .tempInfo div:first-child {
+    display: flex;
+    flex-direction: column;
+}
+
+.weather .tempInfo div:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.weather .tempInfo:last-child img {
+    width: 40px;
+    height: 40px;
+}
+
+.weather .minMax {
+    margin: 10px 120px 0 0;
+    font-size: 1rem;
+}
+
+
+.content {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 30%;
+    height: 70%;
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    border-radius: 15px;
+    color: #fff;
+}
+
+.timer {
+    font-size: 650%;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    overflow-wrap: break-word;
+    padding: 20px;
+}
+
+.firstBox {
+    margin: 0;
+    font-size: 2.1875em;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 25px;
+    position: relative;
+}
+
+.firstBox input {
+    position: relative;
+    border: 0;
+    background: 0;
+    width: 50%;
+    height: 40px;
+    border-width: 0 0 2px;
+    border-bottom: 1px solid #aaaaaa;
+    -webkit-border-radius: 0;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    outline: none;
+    text-align: center;
+    padding: 8px;
+    transition: 0.1s ease-in;
+}
+
+.firstBox .bottom-line {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    transition: 0.5s;
+    border: 0;
+}
+
+.firstBox input:focus ~ .bottom-line {
+    border-color: #fff;
+    width: 50%;
+}
+
+.secondBox {
+    margin-top: 25px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.secondBox .nameBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.secondBox .nameBox p {
+    font-size: 2.1875em;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 12px;
+}
+
+.secondBox .nameBox p #user-name {
+    border: 0;
+    background: 0;
+    color: #fff;
+    font-size: 2rem;
+    outline: none;
+}
+
+
+#edit-name {
+    visibility: visible;
+    cursor: pointer;
+}
+/* #edit-name:hover {
+    visibility: visible;
+} */
+
+.secondBox .nameBox:hover #edit-name {
+    visibility: visible;
+}
+
+.secondBox .taskInput {
+    display: none;
+    justify-content: center;
+    gap: 7px;
+    width: 100%;
+}
+
+.secondBox .taskInput input {
+    width: 80%;
+    border: 0;
+    border-radius: 5px;
+    height: 35px;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+}
+
+.secondBox .taskInput button {
+    width: 40px;
+    border: 0;
+    border-radius: 5px;
+    background: black;
+    color: #fff;
+    font-size: 25px;
+}
+
+.secondBox ul {
+    height: 359px;
+    overflow: auto;
+}
+
+.secondBox ul::-webkit-scrollbar {
+    display: none;
+}
+
+.secondBox ul li {
+    border-radius: 5px;
+    background: aliceblue;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: black;
+    margin-bottom: 8px;
+}
+
+.secondBox ul li input[type="checkbox"] {
+    width: 5%;
+}
+
+.secondBox ul li .task-text {
+    outline: none;
+    width: 80%;
+    padding: 10px;
+}
+
+.secondBox ul li .menu-list {
+    display: block;
+    width: 17%;
+}
+
+.secondBox ul li .menu-list button {
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    width: 35px;
+    height: 25px;
+}
+
+.secondBox ul li .menu-list #editBtn {
+    background-color: #007BFF;
+}
+.secondBox ul li .menu-list #completeBtn {
+    background-color: #28A745;
+}
+.secondBox ul li .menu-list #deleteBtn {
+    background-color: #DC3545;
+}
