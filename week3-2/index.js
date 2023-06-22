@@ -25,7 +25,7 @@ function loadWeather() {
         const lon = pos.coords.longitude;
         console.log(lat, lon)
 
-        const API_KEY = 'c7d9fd9c05cdfd9b18d9ec253bc3a323';
+        const API_KEY = '';
 
         fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`)
         .then(res => res.json())
