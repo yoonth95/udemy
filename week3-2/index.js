@@ -30,7 +30,6 @@ function loadWeather() {
         fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`)
         .then(res => res.json())
         .then(data => {
-            console.log(data.main);
             document.getElementById("cityName").innerText = data.name;
             document.getElementById("temp").innerText = (data.main.temp - 273.15).toFixed(0)+'°';
             document.getElementById("tempImg").src = `https://openweathermap.com/img/w/${data.weather[0].icon}.png`;
@@ -89,8 +88,8 @@ async function newLi(text, id) {
             ${text}
         </div>
         <div class="menu-list">
-            <button id="editBtn" onclick="optionBtn(this, '${id}')">수정</button>
-            <button id="deleteBtn" onclick="optionBtn(this, '${id}')">삭제</button>
+            <button id="editBtn" onclick="optionBtn(this, '${id}')"><i class="fa-solid fa-pen"></i></button>
+            <button id="deleteBtn" onclick="optionBtn(this, '${id}')"><i class="fa-solid fa-trash"></i></button>
         </div>
     `;
 
@@ -145,6 +144,7 @@ edit_name.addEventListener('click', (e) => {
     name_tag.removeAttribute("readonly");
     document.getElementById("edit-name").style.visibility = "hidden";
     nameValue = name_tag.value;
+    name_tag.focus();
 });
 
 document.getElementById("user-name").addEventListener('keyup', (e) => {
@@ -196,8 +196,9 @@ function optionBtn(tag, id) {
     // 수정
     if (tag_id === 'editBtn') {
         tag.id = 'completeBtn';
-        tag.innerText = '완료';
+        tag.innerHTML = '<i class="fa-solid fa-check"></i>';
         text_tag.contentEditable = "true";
+        text_tag.focus();
     } 
     // 삭제
     else if (tag_id === 'deleteBtn') {
@@ -211,7 +212,7 @@ function optionBtn(tag, id) {
     // 수정 완료
     else {
         tag.id = 'editBtn';
-        tag.innerText = '수정';
+        tag.innerHTML = '<i class="fa-solid fa-pen"></i>';
         text_tag.contentEditable = "false";
 
         const todo = todoList.find(todo => todo.id == id);
