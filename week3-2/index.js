@@ -23,7 +23,6 @@ function loadWeather() {
     window.navigator.geolocation.getCurrentPosition((pos) => {
         const lat = pos.coords.latitude;
         const lon = pos.coords.longitude;
-        console.log(lat, lon)
 
         const API_KEY = '';
 
