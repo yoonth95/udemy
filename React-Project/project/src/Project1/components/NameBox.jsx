@@ -5,6 +5,10 @@ const NameBox = ({ onEnterPress }) => {
 
     const inputValue = (e) => {
         if (e.code === 'Enter') {
+            if (text.trim() === "") {
+                alert('이름을 입력해주시기 바랍니다.');
+                return;
+            }
             onEnterPress(text, true);
 
             if (!localStorage.getItem(text)) {

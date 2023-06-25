@@ -39,6 +39,10 @@ const TaskBox = ({name}) => {
     // 이름 수정 완료 시
     const completeName = (e) => {
         if (e.code === 'Enter') {
+            if (newName.trim() === "") {
+                alert("이름을 입력해주시기 바랍니다.");
+                return;
+            }
             setVisible('visible');
             setReadOnly(true);
 
@@ -60,6 +64,10 @@ const TaskBox = ({name}) => {
 
     // todo 추가
     const addBtn = () => {
+        if (taskValue.trim() === "") {
+            alert("값을 입력해주세요.");
+            return;
+        }
         const todo = { id: new Date().getTime(), text: taskValue }
         const nextTodo = [...todos, todo];
         setTodos(nextTodo);
@@ -125,6 +133,10 @@ const TaskBox = ({name}) => {
         let editList = [];
         if (editingTodos.includes(id)) {
             const el = document.querySelector(`[data-id='${id}'] .task-text`).innerText;
+            if (el.trim() === "") {
+                alert("수정할 값을 입력해주시기 바랍니다.");
+                return;
+            }
 
             let origin_value = JSON.parse(localStorage.getItem(originName));
             origin_value.todo_list.map(item => {if (item.id === id) {item.text = el}});
