@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './assets/style/project1.css';
-// import Weather from './components/Weather';
+import Weather from './components/Weather';
 import BoxContent from './components/BoxContent';
 
 const Project1 = () => {
@@ -10,7 +10,7 @@ const Project1 = () => {
 
     return (
         <div className="container" style={{backgroundImage: `url(${img_value})`}}>
-            {/* <Weather/> */}
+            <Weather/>
             <BoxContent/>
         </div>
     );

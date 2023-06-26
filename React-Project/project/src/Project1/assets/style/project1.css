@@ -199,3 +199,43 @@ button, input[type="checkbox"] {
 .container .content .secondBox ul li .menu-list #completeBtn {
     background-color: #28A745;
 }
+
+.container .div-none {
+    display: none;
+}
+
+.container .weather {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 20px 20px;
+    padding: 15px;
+    color: #fff;
+    font-size: 1.2rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 15%;
+    float: right;
+}
+
+.container .weather .tempInfo {
+    display: flex;
+    gap: 30px;
+}
+
+.container .weather .tempInfo div:first-child {
+    display: flex;
+    flex-direction: column;
+}
+
+.container .weather .tempInfo div:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.container .weather .minMax {
+    margin: 10px 120px 0 0;
+    font-size: 1rem;
+}
