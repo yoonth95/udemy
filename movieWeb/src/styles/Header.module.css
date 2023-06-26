@@ -1,0 +1,40 @@
+.navbar {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 8;
+    background: #1d1d1d;
+    overflow: hidden;
+    color: #919191;
+    border-bottom: 1px solid #2f2f2f;
+    backface-visibility: hidden;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar button {
+    border: 0;
+    background: none;
+    color: #fff;
+    font-size: 1.5rem;
+    margin-left: 20px;
+}
+
+.navbar::after {
+    content: '';
+    width: 100px;
+}
+
+
+.navbar h2 {
+    margin: 0;
+}
+
+.navbar h2 a {
+    text-decoration: none;
+    color: #fff;
+}

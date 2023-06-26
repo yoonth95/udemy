@@ -1,0 +1,127 @@
+.main {
+    position: relative;
+    z-index: 7;
+    background-color: rgb(11 10 10);
+    height: 100vh;
+}
+
+.backImage {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    top: 60px;
+    height: 580px;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(0.5);
+}
+
+
+
+.backgroundOverlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 6;
+    width: 100%;
+    background: -moz-linear-gradient(top,rgba(29,29,29,0.65) 0,rgba(29,29,29,1) 100%);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(29,29,29,0.5)),color-stop(100%,rgba(29,29,29,1)));
+    background: -webkit-linear-gradient(top,rgba(29,29,29,0.65) 0,rgba(29,29,29,1) 100%);
+    background: -o-linear-gradient(top,rgba(29,29,29,0.65) 0,rgba(29,29,29,1) 100%);
+    background: -ms-linear-gradient(top,rgba(29,29,29,0.65) 0,rgba(29,29,29,1) 100%);
+    background: linear-gradient(to bottom,rgba(29,29,29,0.65) 0,rgba(29,29,29,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#801d1d1d',endColorstr='#1d1d1d',GradientType=0);
+}
+
+.minContent {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 7;
+    margin: 0 auto;
+}
+
+.minContent .container {
+    width: 1170px;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.minContent .container .poster img {
+    border: 5px solid #fff;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    width: 100%;
+}
+
+.minContent .container .info {
+    margin-left: 10%;
+    width: 70%;
+    color: #fff;
+}
+
+.minContent .container .info h1, .minContent .container .info h2 {
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 2px 2px rgba(0,0,0,.4);
+    margin: 0;
+}
+
+.minContent .container .info h1 {
+    font-size: 2.5em;
+    margin-bottom: 24px;
+    line-height: 42px;
+}
+
+.minContent .container .info h2 {
+    line-height: 24px;
+    font-size: 1.25em;
+}
+
+.minContent .container .info .rating {
+    margin-top: 15px;
+}
+
+.minContent .container .info .rating span.starIcon {
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #6ac045;
+}
+
+.minContent .container .info .rating h4 {
+    font-size: 16px;
+    position: relative;
+    width: 10%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+    text-align: center;
+    display: inline-block;
+}
+
+
+.minContent .container .info .rating h4 span {
+    color: grey;
+}
+
+.minContent .container .info .movieDescription h4 {
+    margin-bottom: 10px
+}

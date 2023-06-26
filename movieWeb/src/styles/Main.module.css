@@ -1,0 +1,198 @@
+p {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+figure {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin: 0;
+}
+
+.mainUP {
+    position: relative;
+    z-index: 7;
+    background-color: rgb(11 10 10);
+    height: 100vh;
+}
+
+
+.main {
+    background-color: #1d1d1d;
+    margin-top: 60px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.movie {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.movie figure {
+    cursor: pointer;
+}
+
+.movie figure:hover .figTag {
+    opacity: 1;
+}
+
+.movie figure:hover img {
+    filter: brightness(30%);
+}
+
+.movie .imgResponsive {
+    width: 180px;
+    height: 265px;
+    object-fit: contain;
+    transition: opacity .15s ease-in-out;
+    -moz-transition: opacity .15s ease-in-out;
+    -webkit-transition: opacity .15s ease-in-out;
+}
+
+.movie .figTag {
+    color: white;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    -webkit-transition: all 300ms;
+    -moz-transition: all 300ms;
+    transition: all 300ms;
+    -webkit-transition-delay: 100ms;
+    -moz-transition-delay: 100ms;
+    transition-delay: 100ms;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.movie .figTag span.starIcon {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #6ac045;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+.movie .figTag h4 {
+    font-size: 25px;
+    position: relative;
+    width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+    text-align: center;
+}
+
+.movie .figTag button {
+    background: #6ac045;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    display: block;
+    font-weight: bold;
+    color: #fff;
+    top: 35px;
+    font-size: 16px;
+    position: relative;
+    width: 130px;
+    padding: 7px 0;
+    margin: 0 auto;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+.movie .figTag button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.movie .figTag button:hover {
+    background: #5da93c;
+}
+
+.movie .movieTitle {
+    width:180px;
+}
+
+.movie .movieTitle a {
+    display: block;
+    margin: 3px 0;
+    width:180px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    color: #fff;
+    font-weight: bold;
+    font-size: .95em;
+    text-decoration: none;
+}
+
+.movie .movieTitle a:hover {
+    color: #919191;
+}
+
+.movie .movieYear {
+    font-size: .85em;
+    color: #919191;
+}
+
+
+.movieAll {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 42px;
+    padding: 50px;
+}
+
+.container {
+    width: 1170px;
+    margin: auto;
+}
+
+.container .searchDiv span {
+    position: absolute;
+    top: 35px;
+    right: 83px;
+}
+
+.container .searchDiv input {
+    margin: 30px 0 0 71.7%;
+    padding: 5px 30px 5px 10px;
+    width: 18%;
+    height: 20px;
+}
+
+@media (max-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
