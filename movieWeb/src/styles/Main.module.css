@@ -29,6 +29,7 @@ figure {
     margin-left: auto;
     padding-left: 15px;
     padding-right: 15px;
+    padding-bottom: 20px
 }
 
 .movie {
@@ -207,6 +208,36 @@ figure {
     padding: 5px 30px 5px 10px;
     width: 18%;
     height: 20px;
+}
+
+.pagination {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+.pagination li {
+    width: 35px;
+    height: 30px;
+    color: #1d1d1d;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination li.active {
+    background-color: #727272;
+    color: #fff;
+}
+
+.pagination li:hover {
+    background-color: #727272;
+    color: #fff;
 }
 
 @media (max-width: 992px) {
