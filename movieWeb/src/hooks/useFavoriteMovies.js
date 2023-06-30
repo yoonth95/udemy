@@ -5,7 +5,7 @@ function UseFavoriteMovies(initialList) {
 
     const save_remove_Favorite = (id) => {
         if (favorite.includes(id)) {
-            const filterList = favorite.filter(item => item != id);
+            const filterList = favorite.filter(item => Number(item) !== Number(id));
             localStorage.setItem("favoriteList", JSON.stringify(filterList));
             setFavorite(filterList);
         } else {

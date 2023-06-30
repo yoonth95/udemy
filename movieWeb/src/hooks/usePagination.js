@@ -1,10 +1,16 @@
-// import { useState } from 'react';
+import { useState } from 'react';
 
-// function UsePagination() {
-//     const
+function UsePagination(data, itemsPerPage, nowPage) {
+    const [currentPage, setCurrentPage] = useState(nowPage);
+    const maxPage = Math.ceil(data.length / itemsPerPage);
 
+    const pageClick = (page) => {
+        setCurrentPage(page);
+    }
 
-//     return { TotalLength, showLength, pageClick }
-// }
+    const currentData = data.slice((currentPage-1)*itemsPerPage, currentPage*itemsPerPage)
 
-// export default UsePagination;
+    return { currentData, maxPage, pageClick }
+}
+
+export default UsePagination;
