@@ -35,6 +35,30 @@ figure {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    position: relative;
+}
+
+.fav {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    z-index: 3;
+    color: #fff;
+    cursor: pointer;
+}
+
+.favClick {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    z-index: 3;
+    color: red;
+    cursor: pointer;
+}
+
+.fav svg,.favClick svg {
+    width: 25px;
+    height: 25px;
 }
 
 .movie figure {
