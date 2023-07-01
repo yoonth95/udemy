@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 import UseFetchMovies from 'hooks/useFetchMovies';
 import UseFavoriteMovies from 'hooks/useFavoriteMovies';
@@ -49,6 +49,7 @@ const MovieList = ({movies}) => {
 
 const Main = () => {
     const location = useLocation();
+    const navigate = useNavigate();
     const query = new URLSearchParams(location.search);
     const page = Number(query.get('page')) || 1;
     
@@ -57,16 +58,24 @@ const Main = () => {
     const { search, searchInput, filterFunction } = UseSearchMovies('');
     const [filterMovie, setMovieList] = useState([]);
 
-    const { currentData, maxPage, pageClick } = UsePagination(filterMovie, 10, page);
+    const { currentData, maxPage } = UsePagination(filterMovie, 10, page);
 
     const searchClick = (list) => {
         if (search.trim() !== "") {
             const filtered = filterFunction(list, search);
             setMovieList(filtered);
+            navigate('/?page=1');
         } else {
             setMovieList(movieList);
+            navigate('/?page=1');
         }
     };
+
+    const EnterClick = (e) => {
+        if (e.key === 'Enter') {
+            searchClick(movieList);
+        }
+    }
 
     // movieList 값이 변경되면 filter 값 넣기
     useEffect(() => {
@@ -86,13 +95,15 @@ const Main = () => {
             <main className={styles.main}>
                 <section className={styles.container}>
                     <div className={styles.searchDiv} style={{position: 'relative'}}>
-                        <input type="text" className={styles.search} value={search} placeholder='검색할 영화를 입력하세요.' onChange={searchInput}/>
+                        <input type="text" className={styles.search} value={search} placeholder='검색할 영화를 입력하세요.' onChange={searchInput} onKeyUp={EnterClick}/>
                         <button className={styles.searchBtn} onClick={() => searchClick(movieList)}><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
                     </div>
                     <MovieList movies={currentData}/>
                     <ul className={styles.pagination}>
                         {Array.from({length: maxPage}, (_, i) => 
-                            <Link key={i} to={`/?page=${i+1}`}><li className={(page === i + 1) ? styles.active : ''} onClick={() => pageClick(i+1)}>{i + 1}</li></Link>
+                            <Link key={i} to={`/?page=${i+1}`}>
+                                <li className={(page === i + 1) ? styles.active : ''}>{i + 1}</li>
+                            </Link>
                         )}
                     </ul>
                 </section>
