@@ -62,7 +62,7 @@ const Chat = () => {
     const messageEnter = (e) => { if (e.key === 'Enter') sendMessage(); }
 
     return (
-        <div style={{position: "relative"}}>
+        <div style={{position: "relative", zIndex: 10}}>
             <div className={styles.chatIcon} onClick={() => setIsOpen(!isOpen)}>
                 <FontAwesomeIcon icon={faComment} />
             </div>
