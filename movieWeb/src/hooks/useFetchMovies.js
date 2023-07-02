@@ -8,19 +8,23 @@ function UseFetchMovies(url) {
     useEffect(() => {
         setLoading(true);
 
-        fetch(url, {
-            method: 'POST',
-        }).then(res => res.json())
-            .then(data => {
-                if (data.status === 'ok') {
-                    setMovieList(...movieList, data.data.movies);
-                } else {
-                    alert('불러오기 실패');
-                    setLoading(false);
-                }
-            })
-            .catch(err => setError(err))
-            .finally(() => setLoading(false));
+        async function fetchData() {
+            try {
+                const res = await fetch(url);
+                if (!res.ok) throw new Error('fetch error');
+
+                const data = await res.json();
+                setMovieList(...movieList, data.data.movies);
+                setLoading(false);
+            }
+            catch (error) {
+                setError(error);
+                setLoading(false);
+                alert("불러오기 실패");
+            }
+
+        }
+        fetchData();
     }, [])
 
     return { movieList, loading, error }
