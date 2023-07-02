@@ -5,6 +5,7 @@ import Main from "pages/Main";
 import Moives from "pages/Moives";
 
 import Header from 'components/Header';
+import Chat from 'components/Chat';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path='/' element={<Main />} />
         <Route path='/movies/:moviename' element={<Moives />} />
       </Routes>
+      <Chat />
     </Router>
   )
 }
