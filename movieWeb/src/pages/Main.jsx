@@ -94,27 +94,28 @@ const Main = () => {
     }, [movieList]);
 
     const sortBtn = (list, item) => {
+        const movie_list = [...list];
         if (item === 'name') {
-            list.sort((a, b) => {
+            movie_list.sort((a, b) => {
                 if (ascNameSort) return a.title < b.title ? -1 : 1;
                 else return a.title > b.title ? -1 : 1;
             });
-            setFilterMovie(list);
+            setFilterMovie(movie_list);
             setAscNameSort(!ascNameSort);
         } else if (item === 'rating') {
-            list.sort((a, b) => {
+            movie_list.sort((a, b) => {
                 if (ascRatingSort) return a.rating < b.rating ? -1 : 1;
                 else return a.rating > b.rating ? -1 : 1;
             });
-            setFilterMovie(list);
+            setFilterMovie(movie_list);
             setAscRatingSort(!ascRatingSort);
         } else {
             let favoriteFilter = [];
             const favoriteList = JSON.parse(localStorage.getItem("favoriteList")) || [];
             if (!isFavorite) {
-                favoriteFilter = [...list.filter(i => favoriteList.includes(i.id))];
+                favoriteFilter = [...movie_list.filter(i => favoriteList.includes(i.id))];
             } else {
-                favoriteFilter = [...list]
+                favoriteFilter = [...movie_list]
             }
             setFilterMovie(favoriteFilter);
             setIsFavorite(!isFavorite);

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import styles from "styles/Movies.module.css";
 
@@ -7,14 +7,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 const Moives = () => {
-    const {moviename} = useParams();     // url 파라미터 값을 가져옴
+    const {moviename} = useParams();
     const [movieInfo, setMovieInfo] = useState({});
     const [movieGenre, setMovieGenre] = useState('');
 
-    // redux
-    const { movies } = useSelector(state => state.MovieStore);
-    console.log(movies);
+    // 1. Link state 값을 가져오기 (새로고침 하거나 브라우저를 종료하면 데이터가 사라짐)
+    const location = useLocation();
+    console.log(location.state.movie);
 
+    // 2. redux (새로고침 하거나 브라우저를 종료하면 데이터가 사라짐)
+    const { movies } = useSelector(state => state.MovieStore);
+    console.log(movies.filter(item => item.slug === moviename)[0]);
+
+    // 3. url의 파라미터 값으로 fetch 후 filter (새로고침 해도 데이터는 남아있지만 fetch를 진행해야 되기 때문에 로딩 시간이 걸림)
     useEffect(() => {
         const url = `https://yts.mx/api/v2/list_movies.json?minimum_rating=8.8&sort_by=year`;
         fetch(url)
