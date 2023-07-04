@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { getMovieList } from 'redux/MovieStore';
 
 function UseFetchMovies(url) {
     const [movieList, setMovieList] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
+    const dispatch = useDispatch();
 
     useEffect(() => {
         setLoading(true);
@@ -15,6 +18,7 @@ function UseFetchMovies(url) {
 
                 const data = await res.json();
                 setMovieList(...movieList, data.data.movies);
+                dispatch(getMovieList({ movies: data.data.movies }));       // redux 사용하여 date 값 저장
                 setLoading(false);
             }
             catch (error) {

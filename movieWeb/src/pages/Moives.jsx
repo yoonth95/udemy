@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import styles from "styles/Movies.module.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,6 +10,10 @@ const Moives = () => {
     const {moviename} = useParams();     // url 파라미터 값을 가져옴
     const [movieInfo, setMovieInfo] = useState({});
     const [movieGenre, setMovieGenre] = useState('');
+
+    // redux
+    const { movies } = useSelector(state => state.MovieStore);
+    console.log(movies);
 
     useEffect(() => {
         const url = `https://yts.mx/api/v2/list_movies.json?minimum_rating=8.8&sort_by=year`;
