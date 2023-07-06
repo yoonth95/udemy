@@ -1,0 +1,42 @@
+[
+    {
+        "idx": 1,
+        "filter_id": "near",
+        "img_src": "cafe1",
+        "name": "카페 저기",
+        "location": "서울시 마포구 와우산로 123456",
+        "type": ["조용한", "힙한"],
+        "remain_seats": 2,
+        "total_seats": 10
+    },
+    {
+        "idx": 2,
+        "filter_id": "near",
+        "img_src": "cafe2",
+        "name": "카페 요기",
+        "location": "서울시 마포구 와우산로 123456",
+        "type": ["테라스", "감성"],
+        "remain_seats": 2,
+        "total_seats": 10
+    },
+    {
+        "idx": 3,
+        "filter_id": "famous",
+        "img_src": "cafe3",
+        "name": "카페 쩌기",
+        "location": "서울시 마포구 와우산로 123456",
+        "type": ["분위기 좋은", "카공"],
+        "remain_seats": 2,
+        "total_seats": 10
+    },
+    {
+        "idx": 4,
+        "filter_id": "quiet",
+        "img_src": "cafe4",
+        "name": "카페 여기",
+        "location": "서울시 마포구 와우산로 123456",
+        "type": ["분위기 좋은", "카공"],
+        "remain_seats": 2,
+        "total_seats": 10
+    }
+]

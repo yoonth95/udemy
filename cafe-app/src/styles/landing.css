@@ -1,0 +1,105 @@
+.login-start {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* height: 100vh; */
+    width: 100%;
+}
+
+.login-title {
+    position: absolute;
+    top: 60px;
+    left: 28px;
+    display: flex;
+    flex-direction: column;
+    font-size: 35px;
+    line-height: 41.77px;
+    font-weight: 700;
+    color: #30A2FF;
+}
+
+.login-title span:last-child {
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+}
+
+.startBtn {
+    font-size: 14px;
+    line-height: 16.71px;
+    font-weight: 400;
+    color: #30A2FF;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.mascot {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.login-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-logo p {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 19px;
+    text-align: left;
+    color: #30A2FF;
+}
+
+.login-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.login-input input { 
+    width: 208px;
+    height: 30px;
+    border-radius: 50px;
+    padding: 11px 36px;
+    font-size: 20px;
+    line-height: 23.87px;
+    background: #30A2FF29;
+    border: none;
+}
+
+.login-input button {
+    width: 280px;
+    height: 52px;
+    border-radius: 50px;
+    font-size: 20px;
+    line-height: 23.87px;
+}
+
+.login-input button:nth-child(3) {
+    background-color: #30A2FF;
+    color: #fff;
+    border: none;
+}
+
+.login-input button:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.52);
+    border: 1px solid #000;
+}

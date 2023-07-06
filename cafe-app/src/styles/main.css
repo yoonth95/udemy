@@ -1,0 +1,17 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    gap: 10px;
+    height: calc(100vh - 445px);
+    overflow-y: auto;
+}
+
+.main::-webkit-scrollbar {
+    display: none;
+}
+
+.main {
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+}

@@ -1,0 +1,86 @@
+.box {
+    display: flex;
+    gap: 11px;
+    width: 234px;
+    height: 95px;
+    border-radius: 10px;
+    background: #EEE;
+    padding: 10px 13px;
+    font-style: normal;
+    font-family: Inter;
+    line-height: normal;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.box img {
+    width: 110px;
+    height: 95px;
+    cursor: pointer;
+}
+
+.box .box-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.box .box-info .box-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3px;
+}
+
+.box .box-info .box-title p {
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.box .box-info .box-title span {
+    cursor: pointer;
+}
+
+.box .box-info .box-title span svg {
+    width: 17px;
+    height: 17px;
+    color: red;
+}
+
+.box .box-info .box-location {
+    color: #000;
+    font-size: 10px;
+    font-weight: 500;
+    width: 115px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+.box .box-info .typeList {
+    margin: 10px 0 14px 0;
+    display: flex;
+    gap: 4px;
+}
+
+.box .box-info .typeList span {
+    display: flex;
+    align-items: center;
+    height: 12px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background-color: #30A2FF;
+    padding: 3px 6px;
+    color: #FFF;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.box .box-info .remain-seats {
+    font-size: 10px;
+    font-weight: 700;
+    text-align: end;
+}

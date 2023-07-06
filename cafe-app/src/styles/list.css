@@ -1,0 +1,62 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    gap: 25px;
+    height: calc(100vh - 445px);
+    overflow-y: auto;
+}
+
+.list::-webkit-scrollbar {
+    display: none;
+}
+
+.list {
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+}
+
+.list .searchDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.list .searchDiv div {
+    display: flex;
+    gap: 10px;
+}
+
+.list .searchDiv div select {
+    border: 1px solid #8F8F90;
+    border-radius: 10px;
+    width: 60px;
+    height: 32px;
+    flex-shrink: 0;
+    padding: 3px;
+}
+
+.list .searchDiv div input {
+    width: 65%;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid #8F8F90;
+    padding: 0 10px;
+}
+
+.list .listDiv .listTitle {
+    color: #000;
+    font-size: 12px;
+    font-style: normal;
+    line-height: normal;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.list .listDiv .cafeList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
