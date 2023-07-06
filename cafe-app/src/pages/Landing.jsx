@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import logo_image from 'assets/images/logo_image.png';
 import mascot_image from 'assets/images/mascot.png';
@@ -7,6 +8,7 @@ import google_logo from 'assets/images/google_logo.png';
 import "styles/landing.css";
 
 const Landing = () => {
+    const navigate = useNavigate();
     const [loginStart, setLoginStart] = useState(false);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -21,6 +23,20 @@ const Landing = () => {
         }
     }
 
+    const loginComplete = () => {
+        if (email.trim() === '' || password.trim() === '') {
+            alert('아이디 또는 비밀번호를 입력해주시기 바랍니다.');
+            return;
+        }
+        navigate('/list');
+    }
+
+    const onKeyUp = (e) => {
+        if (e.key === 'Enter') {
+            loginComplete();
+        }
+    }
+
     return (
         <>
         {loginStart ? 
@@ -30,10 +46,10 @@ const Landing = () => {
                     <p>Give My <br />Seat</p>
                 </div>
                 <div className='login-input'>
-                    <input type="text" name="email" value={email} placeholder='Email' onChange={inputValue}/>
-                    <input type="password" name="password" value={password} placeholder='Password' onChange={inputValue}/>
-                    <button>Login</button>
-                    <button><img src={google_logo} alt="구글로고" />Login with Google</button>
+                    <input type="text" name="email" value={email} placeholder='Email' onChange={inputValue} onKeyUp={onKeyUp}/>
+                    <input type="password" name="password" value={password} placeholder='Password' onChange={inputValue} onKeyUp={onKeyUp}/>
+                    <button onClick={loginComplete}>Login</button>
+                    <button onClick={loginComplete}><img src={google_logo} alt="구글로고" />Login with Google</button>
                 </div>
             </div>
         :
