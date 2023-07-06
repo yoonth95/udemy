@@ -5,15 +5,12 @@
     gap: 25px;
     height: calc(100vh - 445px);
     overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
 }
 
 .list::-webkit-scrollbar {
     display: none;
-}
-
-.list {
-    -ms-overflow-style: none;
-    scrollbar-width: none; 
 }
 
 .list .searchDiv {

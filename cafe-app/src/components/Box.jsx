@@ -16,9 +16,8 @@ const Box = (props) => {
     const navigate = useNavigate();
     const images = { cafe1, cafe2, cafe3, cafe4 };
 
-    const moveDetail = (id) => {
-        console.log("디테일 이동", id);
-        navigate(`/detail/${id}`)
+    const moveCafe = (id) => {
+        navigate(`/cafe/${id}`);
     }
 
     const clickFavorite = (event, id) => {
@@ -30,13 +29,13 @@ const Box = (props) => {
         <>
             {props.cafeList.map(item => (
                 <div className='box' key={item.idx}>
-                    <img src={images[item.img_src]} alt="" onClick={() => moveDetail(item.idx)}/>
+                    <img src={images[item.img_src]} alt="" onClick={() => moveCafe(item.idx)}/>
                     <div className='box-info'>
                         <div className='box-title'>
-                            <p onClick={() => moveDetail(item.idx)}>{item.name}</p>
+                            <p onClick={() => moveCafe(item.idx)}>{item.name}</p>
                             <span onClick={(event) => clickFavorite(event, item.idx)}>{props.favorite.includes(item.idx) ? <FontAwesomeIcon icon={faHeartSolid} /> : <FontAwesomeIcon icon={faHeartRegular} />}</span>
                         </div>
-                        <p className='box-location' onClick={() => moveDetail(item.idx)}>{item.location}</p>
+                        <p className='box-location' onClick={() => moveCafe(item.idx)}>{item.location}</p>
                         <div className='typeList'>
                             {item.type.map((i, index) => (
                                 <span key={index}>{i}</span>

@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Landing from 'pages/Landing';
 import Main from 'pages/Main';
 import List from 'pages/List';
-import Detail from 'pages/Detail';
+import Cafe from 'pages/Cafe';
 import Seat from 'pages/Seat';
 
 function App() {
@@ -15,8 +15,8 @@ function App() {
           <Route path='/' element={<Landing />} />
           <Route path='/main' element={<Main />} />
           <Route path='/list' element={<List />} />
-          <Route path='/detail:id' element={<Detail />} />
-          <Route path='/detail:id/seat' element={<Seat />} />
+          <Route path='/cafe/:id' element={<Cafe />} />
+          <Route path='/cafe/:id/seat' element={<Seat />} />
         </Routes>
       </Router>
     </div>

@@ -14,6 +14,7 @@ const Main = () => {
     return (
         <div className='container'>
             <div className='main'>
+                <h2>구독 리스트</h2>
                 <Box cafeList={cafeList.filter(e => favorite.includes(e.idx))} favorite={favorite} save_remove_Favorite={save_remove_Favorite}/>
             </div>
             <Footer />
